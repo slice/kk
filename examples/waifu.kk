@@ -18,7 +18,7 @@ if bool(">", argslength(), 0) {
     "❤"
   }
 
-  emoji " I'd rate " usernick(args) " as " math("/", rating, 10) "/10! " emoji
+  emoji " I'd rate " usernick(args()) " as " math("/", rating, 10) "/10! " emoji
 } else {
   // Show a help message.
   "Calculate the waifu rating of any user."
