@@ -36,7 +36,7 @@ semantics.addOperation('eval', {
     // output as raw string
     return string.eval()
   },
-  Expression_get (name) {
+  VariableRef (name) {
     return `{get;${name.eval()}}`
   },
 

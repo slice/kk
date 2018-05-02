@@ -5,7 +5,8 @@ KK {
     | VariableDeclaration
     | FunctionCall
     | Mapping
-    | name -- get
+    | VariableRef
+  VariableRef = name
   Mapping = "{" (name ":" Expression)* "}"
   VariableDeclaration = name "=" Expression
   FunctionCall = name "(" ListOf<Expression, ","> ")"
