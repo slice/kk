@@ -1,17 +1,24 @@
 KK {
   Program = Expression*
+  Block = "{" Expression+ "}"
   Expression
-  	= string -- raw
+    = string -- raw
+    | If
+    | number
     | VariableDeclaration
     | FunctionCall
     | Mapping
     | VariableRef
+  If = "if" Expression Block ("else" Block)?
   VariableRef = name
   Mapping = "{" (name ":" Expression)* "}"
   VariableDeclaration = name "=" Expression
   FunctionCall = name "(" ListOf<Expression, ","> ")"
 
   // primitives
-  name = (alnum | "_" | "." | "@" | "*" | "~")+
+  comment = "//" (~"\n" any)*
+  name = (alnum | "_" | "." | "@" | "*" | "~" | "+" | "-" | "/" | "*")+
   string = "\"" (~"\"" any)* "\""
+  number = digit+
+  space := "\t" | " " | "\n" | "\r" | comment
 }
