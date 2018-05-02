@@ -19,4 +19,8 @@ $ npm i -g slice/kk
 $ kk file.kk
 ```
 
+## Usage
+
+Read the [guide](/GUIDE.md).
+
 [BBTag]: https://blargbot.xyz/tags#set
