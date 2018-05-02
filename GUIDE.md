@@ -4,6 +4,17 @@ kk is a tiny "programming language" that compiles straight to BBTag. It's
 designed to make writing BBTag less error-prone and prettier. The syntax is
 very flexible and free-flowing.
 
+## Installing
+
+kk is not available on npm. Instead, you should install it directly from
+GitHub:
+
+```
+npm install -g slice/kk
+```
+
+This will add the `kk` command to your system. To use it, simply pass the path
+to a source file as the first argument, like: `kk file.kk`.
 ## Hello, world!
 
 Much like BBTag itself, any stray strings that are not part of tag calls or the
