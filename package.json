@@ -1,0 +1,10 @@
+{
+  "name": "kk",
+  "private": true,
+  "bin": {
+    "kk": "./src/compile.js"
+  },
+  "dependencies": {
+    "ohm-js": "^0.14.0"
+  }
+}

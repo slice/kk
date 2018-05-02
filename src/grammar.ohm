@@ -1,0 +1,16 @@
+KK {
+  Program = Expression*
+  Expression
+  	= string -- raw
+    | VariableDeclaration
+    | FunctionCall
+    | Mapping
+    | name -- get
+  Mapping = "{" (name ":" Expression)* "}"
+  VariableDeclaration = name "=" Expression
+  FunctionCall = name "(" ListOf<Expression, ","> ")"
+
+  // primitives
+  name = (alnum | "_" | "." | "@" | "*" | "~")+
+  string = "\"" (~"\"" any)* "\""
+}
